@@ -1,0 +1,667 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    list-style: none
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:wght@200&display=swap');
+
+:root {
+    --maincolor: #DEC700
+}
+
+body {
+    background-color: #000;
+}
+
+
+#navbar {
+    position: relative;
+    z-index: 9999;
+}
+
+nav {
+    width: 100%;
+    background: rgb(32 33 35);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+nav>div {
+    width: 80%;
+    margin: auto;
+}
+
+.uk-navbar-nav h1 {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.uk-navbar-nav h1 span {
+    font-family: 'Sacramento';
+}
+
+nav .uk-navbar-right ul li a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #DEDEDE;
+}
+
+#toggle_btn {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.drop {
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(215 202 202 / 85%);
+    display: none;
+    height: 0px;
+    text-align: center;
+}
+
+.open {
+    height: 320px;
+    display: block;
+}
+
+.drop li {
+    padding: 20px;
+}
+
+.drop li a {
+    color: #1f1e1e;
+    font-weight: 600;
+}
+
+.cart-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 2px red solid;
+    padding-bottom: 1rem;
+}
+
+#cartcount {
+    background-color: var(--maincolor);
+}
+
+td {
+    font-size: 1.5rem;
+}
+
+.price {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-details .cart-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--maincolor)
+}
+
+.total {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total .total-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* start home section */
+
+#home {
+    background: #262424 url(../images/pngwing\ 1.png);
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#home .homecontent {
+    width: 90%;
+    padding-left: 8%;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+
+#home .homecontent .homecontent1 {
+    padding-left: 3%;
+    padding-top: 20%;
+}
+
+#home .homecontent .homecontent1 p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 19px;
+    color: #656363
+}
+
+#home .homecontent .homecontent1 h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#home .homecontent .homecontent2 {
+    padding-top: 15%;
+    padding-left: 50%;
+}
+
+#home .homecontent .homecontent2 h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+#home .homecontent .homecontent2 p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 19px;
+    color: #656363
+}
+
+#home .homeimg {
+    width: 92%;
+    margin-left: 8%;
+    background-color: rgba(23, 23, 25, 0.8);
+    ;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+
+#home .homeimg .homeimg1,
+#home .homeimg .homeimg2 {
+    width: 46%;
+    display: flex;
+}
+
+#home .homeimg .homeitem {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    color: #9a9393;
+}
+
+#home .homeimg .homeitem h6 {
+    color: #fff;
+}
+
+.sidebar {
+    width: 8%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vh + 81.95px);
+    background-color: #0C0C0C;
+    border: 2px solid #262424;
+    z-index: 999;
+}
+
+.sidebar>div nav {
+    background: #1A1A1A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/*
+#home nav{
+width: 100%;
+background: rgba(7, 7, 7, 0.2);
+box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+}
+#home nav>div{
+    width: 80%;
+    margin: auto;
+}
+.uk-navbar-nav h1{
+font-family: 'Roboto';
+font-weight: 900;
+font-size: 1.5rem;
+color: #FFFFFF;
+}
+.uk-navbar-nav h1 span{
+font-family: 'Sacramento';
+}
+#home nav ul li a{
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #DEDEDE;
+} */
+#home .fixedbox {
+    background-color: var(--maincolor);
+    width: 62px;
+    height: 210px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: absolute;
+    top: 168px;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+#home .fixedbox ul {
+    list-style: none;
+    padding-left: 37%;
+}
+
+#home .fixedbox ul li a {
+    color: #FFFFFF;
+    padding-top: 1rem;
+}
+
+/* end home section */
+
+/* start favfruits section */
+#fav-fruits {
+    padding: 3rem 0 1.5rem 0;
+}
+
+.headerItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerItem h1 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 37.5px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.headerItem p {
+    color: #fff;
+}
+
+.headerItem p span {
+    margin-left: 5px;
+}
+
+hr {
+    color: #171719;
+}
+
+.uk-card-body {
+    padding: 0 21px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #18181A;
+}
+
+.uk-card-default .uk-card-title {
+    margin-top: 15px;
+    color: #FFFFFF;
+    line-height: 18.75px;
+}
+
+.uk-card-media-top img {
+    width: 100%;
+}
+
+.uk-text-center {
+    text-align: left !important
+}
+
+.uk-card-body p {
+    font-size: 12px;
+    line-height: 14.06px;
+    font-weight: 100;
+}
+
+.price p {
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+
+}
+
+.price p span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #555555;
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.btn1 button {
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    padding: 5px 16px;
+    color: #FFFFFF;
+}
+
+.uk-button {
+    padding: 0 0;
+}
+
+.buy {
+    background-color: var(--maincolor);
+    margin-left: 10px;
+}
+
+.space {
+    margin-bottom: 30px;
+}
+
+/* end favfruits section */
+
+/* start fruitsshoop section */
+#fruitShoop {
+    padding-bottom: 6rem;
+}
+
+/* end fruitsshoop section */
+
+
+/* start About section */
+#about {
+    padding: 2rem 0;
+    background-color: #090A10;
+}
+
+article {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.dots {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    /* padding-top:1.2rem; */
+}
+
+.items {
+    display: flex;
+}
+
+.items p {
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.uk-width-expand {
+    color: #FFFFFF;
+    padding-top: 13%;
+    padding-left: 10px;
+}
+
+.subdots {
+    padding-top: 40%;
+}
+
+.uk-comment-header {
+    margin-bottom: 0;
+}
+
+.subdots ul:first-child {
+    margin-bottom: 5px;
+}
+
+/* end about section */
+
+
+/* start footer section  */
+
+footer {
+    background-color: #000;
+}
+
+.footeritem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.footeritem h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    color: #898888;
+}
+
+.footeritem .footerinput {
+    width: 50%;
+}
+
+.footeritem .footerinput input {
+    width: 70%;
+    padding: 10px
+}
+
+.footeritem .footerinput button {
+    padding: 10px;
+    color: #000;
+}
+
+.footeritem .icons {
+    background-color: #18181A;
+    padding: 4rem 2.5rem;
+    color: #FFFFFF;
+    width: 25%;
+}
+
+.icons p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.icons a {
+    padding-right: 1rem;
+}
+
+footer .footercontent {
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    padding-top: 1rem;
+}
+
+footer .footercontent h1 {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+footer .footercontent h1 span {
+    font-family: 'Sacramento';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 47px;
+}
+
+footer .footercontent ul {
+    list-style: none;
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footercontent ul li {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+}
+
+footer .footercontent p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+}
+
+/* end footer section  */
+
+
+/* responsive media */
+
+@media screen and (max-width:992px) {
+    .buy {
+        margin-left: 0px;
+    }
+
+    .homelinks {
+        display: none;
+    }
+
+    #toggle_btn {
+        display: block;
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+    .uk-modal {
+        padding: 75px 47px;
+        margin-left: 5%;
+    }
+
+    td {
+        font-size: .75rem;
+    }
+
+    #home {
+        background: #262424 none;
+    }
+
+    #home .homecontent {
+        display: none;
+    }
+
+    #home .homecontent .homecontent1 {
+        padding-top: 5%;
+    }
+
+    #home .homecontent .homecontent2 {
+        padding-top: 10%;
+        padding-left: 5%;
+    }
+
+    #home .homeimg {
+        flex-wrap: wrap;
+    }
+
+    #home .homeimg .homeimg1,
+    #home .homeimg .homeimg2 {
+        width: 92%;
+
+    }
+
+    #home .homeimg .homeimg1 {
+        padding-bottom: 10px;
+    }
+
+    .subdots {
+        padding-top: 20%;
+    }
+
+    .uk-dotnav>* {
+        padding-left: 5px;
+    }
+
+    .footeritem {
+        padding-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .icons a {
+        padding-right: .5rem;
+    }
+
+    .footeritem h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        width: 100%
+    }
+
+    .footeritem .icons {
+        width: 50%;
+    }
+
+    footer .footercontent {
+        flex-wrap: wrap;
+    }
+
+    .footeritem .footerinput {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    footer .footercontent h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    footer .footercontent h1 span {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    footer .footercontent ul {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    #home .homeimg .homeimg1,
+    #home .homeimg .homeimg2 {
+        flex-wrap: wrap;
+    }
+}

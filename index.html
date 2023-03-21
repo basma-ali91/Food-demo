@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <section id="navbar">
+
+        <div class="modal" id="add" tabindex="-1"
+        role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">تمت الاضافه بنجاح</div>
+          </div>
+        </div>
+      </div>
+        <div class="sidebar">
+            <div>
+                <nav>
+                    <div>
+                        <div uk-navbar>
+                            <div class="uk-navbar-center">
+                                <a class="uk-navbar-toggle" uk-navbar-toggle-icon href=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <nav>
+            <div>
+                <div uk-navbar>
+                    <div class="uk-navbar-left">
+                        <ul class="uk-navbar-nav">
+                            <li><a href="#">
+                                    <h1>Food <br><span>Empire</span></h1>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-navbar-right ">
+                        <ul class="uk-navbar-nav homelinks">
+                            <li><a href="#fav-fruits">Favorite Fruits</a></li>
+                            <li><a href="#fruitShoop">Fruit Shoop</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#" uk-icon="icon:  sign-in"></a></li>
+                            <li><a href="#modal-example" uk-toggle uk-icon="icon:  bag"><span class="uk-badge"id="cartcount"></span></a></li>
+                        </ul>
+
+                        <!-- This is the modal -->
+                        <div id="modal-example" uk-modal>
+                            <div class="uk-modal-dialog uk-modal-body">
+                                <h2 class="uk-modal-title">SHOPPING CART</h2>
+
+                                <div class="cart-details">
+                                    <!-- <div class="cart-title">orange</div>
+                                    <div class="cart-price">$45</div>
+                                    <input type="number" name="" id=""value="1" class="cart-quantiy"> -->
+                                    <table class="table">
+                                        <tbody id='tbody'>
+                                            <!-- THE CODE FROM JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="total">
+                                    <div class="total-title">Total</div>
+                                    <div id="total-price"></div>
+                                </div>
+                                
+                                <p class="uk-text-right">
+                                    <button class="uk-button uk-button-default uk-modal-close"
+                                        type="button">Cancel</button>
+                                    <button class="uk-button uk-button-danger" type="button">Buy Now</button>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+                    </div>
+                    <div class="drop">
+                        <li><a href="#favfruits">Favorite Fruits</a></li>
+                        <li><a href="#fruitShoop">Fruit Shoop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#" uk-icon="icon:  sign-in"></a></li>
+                        <li><a href="#modal-example" uk-toggle uk-icon="icon:  bag"></a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- start home section -->
+
+    <section id="home">
+        <div class="homecontent">
+            <div class="homecontent1">
+                <p>1/2</p>
+                <h4>Ananas</h4>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+            </div>
+            <div class="homecontent2">
+                <h2>Fruit <br> Delivery</h2>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+        <div class="homeimg">
+            <div class="homeimg1">
+                <img src="images/home3.png" alt="">
+                <div class="homeitem">
+                    <h6>Orange</h6>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <p>Amet minim mollit non deserunt ullamco </p>
+                </div>
+            </div>
+            <div class="homeimg2">
+                <img src="images/home4.png" alt="">
+                <div class="homeitem">
+                    <h6>Melons</h6>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <p>Amet minim mollit non deserunt ullamco </p>
+                </div>
+            </div>
+        </div>
+        <div class="fixedbox">
+            <ul>
+                <li><a href="" uk-icon="icon: instagram"></a></li>
+                <li><a href="" uk-icon="icon: facebook"></a></li>
+                <li><a href="" uk-icon="icon: twitter"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- end home section -->
+
+    <!-- start fav-fruits section -->
+
+    <section id="fav-fruits">
+        <div class="uk-container">
+            <div class="headerItem">
+                <h1>Favorite Fruits</h1>
+                <p>More <span uk-icon="icon:  arrow-right"></span></p>
+            </div>
+            <hr>
+            <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/1.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Banana</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price ">
+                                        <p> 39 </p>
+                                        
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/2.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Orange</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price ">
+                                        <p>20</p>
+                                        <span>30$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/4.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Pinaple</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>32 </p>
+                                        <span>25$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/5.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Apple</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39</p>
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end fav-fruits section -->
+
+    <!-- start fruitsshoop section -->
+
+    <section id="fruitShoop">
+        <div class="uk-container">
+            <div class="headerItem">
+                <h1>Fruits Shoop</h1>
+                <p>More <span uk-icon="icon:  arrow-right"></span></p>
+            </div>
+            <hr>
+            <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-4@m  space" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/5.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Banana</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39</p>
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/6.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Orange</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39</p>
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/7.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Pinaple</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39</p>
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/8.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Apple</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39 </p>
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/9.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Banana</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39 </p>
+                                        <span>55$ </span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/10.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Orange</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39 </p>
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/11.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Pinaple</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39 </p>
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                        <div>
+                            <div class="uk-card uk-card-default ">
+                                <div class="uk-card-media-top">
+                                    <img src="images/12.png" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Apple</h3>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <div class="price">
+                                        <p>39 </p>
+                                        <span>55$</span>
+                                    </div>
+                                    <div class="btn1">
+                                        <p uk-margin>
+                                            <button class="uk-button uk-button-default"><i
+                                                    class="fa-solid fa-minus"></i> <span> 1 </span> <i
+                                                    class="fa-solid fa-plus"></i></button>
+                                            <button class="uk-button uk-button-default buy">Buy Now</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end fav-fruits section -->
+
+    <!-- start about section -->
+
+    <section id="about">
+        <div class="uk-container">
+            <div class="headerItem">
+                <h1>Abouts Us</h1>
+                <p> <span uk-icon="icon:  arrow-left"></span><span uk-icon="icon:  arrow-right"></span></p>
+            </div>
+            <hr>
+            <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body ">
+                        <ul class="uk-comment-list">
+                            <li>
+                                <article class="uk-comment uk-visible-toggle" tabindex="-1" role="comment">
+                                    <header class="uk-comment-header uk-position-relative">
+                                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto  dots">
+                                                <div class="items">
+                                                    <div>
+                                                        <img class="uk-comment-avatar" src="images/Ellipse 8.png"
+                                                            width="80" height="80" alt="">
+                                                        <p>Marina</p>
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="subdots">
+                                                    <ul class="uk-dotnav">
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                    </ul>
+                                                    <ul class="uk-dotnav">
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="uk-comment-body">
+                                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <ul class="uk-comment-list">
+                            <li>
+                                <article class="uk-comment uk-visible-toggle" tabindex="-1" role="comment">
+                                    <header class="uk-comment-header uk-position-relative">
+                                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto  dots">
+                                                <div class="items">
+                                                    <div>
+                                                        <img class="uk-comment-avatar" src="images/Ellipse 8.png"
+                                                            width="80" height="80" alt="">
+                                                        <p>Marina</p>
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="subdots">
+                                                    <ul class="uk-dotnav">
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                    </ul>
+                                                    <ul class="uk-dotnav">
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="uk-comment-body">
+                                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <ul class="uk-comment-list">
+                            <li>
+                                <article class="uk-comment uk-visible-toggle" tabindex="-1" role="comment">
+                                    <header class="uk-comment-header uk-position-relative">
+                                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto  dots">
+                                                <div class="items">
+                                                    <div>
+                                                        <img class="uk-comment-avatar" src="images/Ellipse 8.png"
+                                                            width="80" height="80" alt="">
+                                                        <p>Marina</p>
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                        <span uk-icon="icon:  star ;ratio: .75"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="subdots">
+                                                    <ul class="uk-dotnav">
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                    </ul>
+                                                    <ul class="uk-dotnav">
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                        <li class="uk-active"><a href="#"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="uk-comment-body">
+                                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end about section -->
+
+    <!-- start footer section -->
+
+    <footer>
+        <div class="footeritem">
+            <h1>Subscribe <br> to newsletter</h1>
+            <div class="footerinput">
+                <input type="text" class="text" placeholder="join">
+                <button>Subsribe</button>
+            </div>
+            <div class="icons">
+                <p>Social Media</p>
+                <a href="" uk-icon="icon: instagram"></a>
+                <a href="" uk-icon="icon: facebook"></a>
+                <a href="" uk-icon="icon: twitter"></a>
+            </div>
+        </div>
+        <div class="footercontent ">
+            <h1>Food <span><br>Empire</span></h1>
+            <ul>
+                <li>Best Fruits</li>
+                <li>Social Media</li>
+                <li>More for You</li>
+                <li>YourShoop</li>
+            </ul>
+            <p>The Copyright 2022 guide covers 14 jurisdictions. </p>
+        </div>
+    </footer>
+
+    <!-- end footer section -->
+
+
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
