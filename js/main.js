@@ -5,13 +5,12 @@ btn.addEventListener("click", function () {
         drop.classList.toggle('open')
 });
 
-
 // CART shooping
 let BuyNow = document.getElementsByClassName("buy");
 let cartTitle = document.getElementsByClassName("uk-card-title");
 let cartPrice = document.getElementsByClassName("price");
 let cartlenght=document.getElementById("cartcount");
-let Quantity = document.getElementsByClassName("number");
+let empty=document.getElementById("empty")
 let cart = [];
 let count = 1;
 
@@ -19,18 +18,24 @@ if (localStorage.getItem("CartShopping") != null) {
         cart = JSON.parse(localStorage.getItem("CartShopping"));
         cartlenght.innerHTML=cart.length;
         totalPrice();
-        display();
+        empty.style.display="none";
+        display();  
 }
 else{
         cartlenght.innerHTML=0;
+        empty.style.display="none"; 
 }
+if(cart.length<=0){
+empty.style.display="block";
+}
+
+
 
 for (let i = 0; i < BuyNow.length; i++) {
         BuyNow[i].addEventListener("click", function () {
                 let cartItem = {
                         title: cartTitle[i].textContent,
                         price: cartPrice[i].firstElementChild.textContent,
-
                 }
                 cart.push(cartItem);
                 localStorage.setItem("CartShopping", JSON.stringify(cart));
@@ -49,7 +54,7 @@ function display() {
               <td>${cart[i].price}$</td>
               <td>
               <button onclick="decreament()">-</button> 
-              <span class="number">${count}</span>
+              <span>1</span>
               <button onclick="increament()">+</button>
               </td>
               <td>
@@ -58,6 +63,7 @@ function display() {
           </tr>`;
         }
         document.getElementById("tbody").innerHTML = details;
+        empty.style.display="none";
         totalPrice();
 }
 
@@ -67,6 +73,9 @@ function deleteitem(x) {
         display();
         localStorage.setItem("CartShopping", JSON.stringify(cart));
         cartlenght.innerHTML=cart.length;
+        if(cart.length<=0){
+                empty.style.display="block"; 
+        }
 }
 
 //TOtal Price
@@ -80,7 +89,6 @@ function totalPrice() {
 
 function increament() {
        console.log("welcome");
-       display()
 }
 function decreament() {
       console.log("welcome1")
