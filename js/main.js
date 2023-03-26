@@ -44,10 +44,10 @@ function display() {
                 details += `<tr>
               <td class="text-warning">${cart[i].title}</td>
               <td>${cart[i].price}$</td>
-              <td class="d-flex" onclick="savecount(${i})">
-              <button onclick="decreament(${i})">-</button> 
-              <input type="text"  maxlength="2" max="10" size="1" value="${cart[i].cartcount} " class="form-control w-25 number" >
-              <button onclick="increament(${i})">+</button>
+              <td class="d-flex ip" onclick="savecount(${i})">
+              <button onclick="decreament(${i})" style="background-color:transparent">-</button> 
+              <input type="text" readonly="readonly" maxlength="2" max="10" size="1" value="${cart[i].cartcount} " class="form-control w-25 number" >
+              <button onclick="increament(${i})" style="background-color:transparent">+</button>
               </td>
               <td>
                <button class="btn btn-danger" onclick="deleteitem(${i})"><i class="fas fa-trash"></i></button>
@@ -82,9 +82,7 @@ function totalPrice() {
 function savecount(x) {
         let total = 0;
         cartquantity[x].value = count;
-        // console.log(cartquantity[x].value)
         cart[x].cartcount = cartquantity[x].value;
-        // console.log(cart)
         localStorage.setItem("CartShopping", JSON.stringify(cart))
         for (let i = 0; i < cart.length; i++) {
                 total += Number((cart[i].price) * cart[i].cartcount)
@@ -103,7 +101,7 @@ function increament(y) {
 function decreament(y) {
         count = cartquantity[y].value;
         if (count <= 0) {
-                cartquantity[y].value = 0;
+                deleteitem(y);
         }
         else {
                 count--

@@ -109,11 +109,19 @@ nav .uk-navbar-right ul li a {
 #cartcount {
     background-color: var(--maincolor);
 }
-
-td {
+.table>:not(caption)>*>* {
+    border-bottom-width: 0;
+}
+.btn{
+    padding: 0.2rem 0.55rem;
     font-size: 1rem;
 }
-
+td {
+    font-size: 1.2rem;
+}
+.ip{
+    justify-content: space-around;
+}
 .price {
     width: 40%;
     display: flex;
@@ -576,9 +584,13 @@ footer .footercontent p {
 
 @media screen and (max-width:768px) {
     .uk-modal {
-        padding: 75px 47px;
+        padding: 75px 2px;
         margin-left: 5%;
     }
+    
+.uk-modal-body {
+    padding: 20px 13px;
+}
 
     td {
         font-size: .75rem;
@@ -673,5 +685,11 @@ footer .footercontent p {
     #home .homeimg .homeimg1,
     #home .homeimg .homeimg2 {
         flex-wrap: wrap;
+    }
+    td {
+        font-size: 1rem;
+    }
+    .ip{
+        justify-content: flex-start;
     }
 }
