@@ -82,9 +82,9 @@ function totalPrice() {
 function savecount(x) {
         let total = 0;
         cartquantity[x].value = count;
-        console.log(cartquantity[x].value)
+        // console.log(cartquantity[x].value)
         cart[x].cartcount = cartquantity[x].value;
-        console.log(cart)
+        // console.log(cart)
         localStorage.setItem("CartShopping", JSON.stringify(cart))
         for (let i = 0; i < cart.length; i++) {
                 total += Number((cart[i].price) * cart[i].cartcount)

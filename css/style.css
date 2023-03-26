@@ -65,9 +65,12 @@ nav .uk-navbar-right ul li a {
 #empty{
     display: none;
     margin: auto;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--maincolor);
+}
+.form-control {
+    padding:.25rem 0 !important
 }
 .drop {
     position: absolute;
@@ -108,7 +111,7 @@ nav .uk-navbar-right ul li a {
 }
 
 td {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .price {
